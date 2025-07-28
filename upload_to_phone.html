@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>local fileupload</title>
+ </head>
+ <style type="text/css" media="all">
+ *{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+ }
+ #uploadBtn{
+  width: 100px;
+  height: 30px;
+  position: relative;
+  top: 10px;
+  left: 150px;
+ }
+ #sendBtn{
+  width: 100px;
+  height: 30px;
+  position: relative;
+  top: 10px;
+  left: 150px;
+ }
+ #uploadFile{
+  display: none;
+ }
+ .uploader{
+  padding: 10px 20px;
+  background: #009FFF;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  border-radius: 5px;
+  border: none;
+ }
+ #selector{
+  position: relative;
+  top: 50px;
+  left: 300px;
+ }
+ #downloadBtn{
+  width: 100px;
+  height: 30px;
+  position: relative;
+  top: 50px;
+  left: 300px;
+ }
+ </style>
+ 
+ <body>
+  <a id="" href="../Folder 11/gallery.html">view gallery</a>
+    <input type="file" id="uploadFile" accept="image/*,video/*">
+     <label for="uploadFile" class="uploader">select file to upload</label>
+    
+    <button class="btn" id="uploadBtn">upload</button>
+<!--    <button class="btn" id="sendBtn" >send</button>
+    <br />
+    <select id="selector" class="select">
+     
+    </select>
+   <button class="btn" id="downloadBtn" >downloadList</button>-->
+    <div id="previewbox">
+     
+    </div>
+  <script src="upload_to_phone.js"></script>
+ </body>
+</html>
