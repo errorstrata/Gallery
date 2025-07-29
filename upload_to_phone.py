@@ -32,7 +32,3 @@ class ServeFile(Resource):
 api.add_resource(UploadFile,'/upload')
 api.add_resource(SendFile,'/files')
 api.add_resource(ServeFile,'/files/<string:filename>')
-
-
-if __name__ == '__main__':
- app.run()
