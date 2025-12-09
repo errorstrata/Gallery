@@ -22,10 +22,19 @@ function loadImages() {
  .then(data => {
   let images = data.files;
   images.forEach(image => {
-   let img = document.createElement('img');
-   img.src = `http://127.0.0.1:5000/files/${image}`;
-   img.classList.add('photo');
-   board.appendChild(img);
+    let imageType = image.type;
+    if (imageType.startsWith('image/')) {
+      const img = document.createElement('img');
+      img.src = `http://127.0.0.1:5000/files/${image}ˋ;
+      img.classList.add('image')
+      imageview_box.appendChild(image)
+    }
+    else if(fileType.startsWith('video/')) {
+      const video = document.createElement('video');
+      video.src = ˋhttp://127.0.0.1:5000/files/${video}ˋ
+      video.classList.add('video')
+      videoview_box.appendChild(video)
+    }
   })
  })
 }
