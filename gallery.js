@@ -20,10 +20,8 @@ function loadImages() {
  fetch('http://127.0.0.1:5000/files')
  .then(res => res.json())
  .then(data => {
-  console.log(data.files)
   let images = data.files;
   images.forEach(image => {
-   console.log(image)
    let img = document.createElement('img');
    img.src = `http://127.0.0.1:5000/files/${image}`;
    img.classList.add('photo');
