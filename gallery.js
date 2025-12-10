@@ -1,6 +1,8 @@
 let files = document.getElementById('files');
 let videos = document.getElementById('videos');
 let images = document.getElementById('images');
+let imageview_box = document.getElementById('imagebox');
+let videoview_box = document.getElementById('videobox');
 
 files.addEventListener('click', () => setCurrent(files));
 videos.addEventListener('click', () => setCurrent(videos));
@@ -37,4 +39,4 @@ function loadImages() {
  })
 }
 
-window.onload(loadImages())
+loadImages()
