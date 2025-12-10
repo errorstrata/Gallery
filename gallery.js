@@ -41,7 +41,7 @@ function loadImages() {
  })
  .catch(err => {
    alert("error: ", data.message)
- }
+ });
 }
 
 loadImages()
