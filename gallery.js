@@ -23,7 +23,7 @@ function loadImages() {
   let images = data.files;
   images.forEach(item => {
     //get the extension
-    let ext = item.split('.').pop().tolowerCase();
+    let ext = item.split('.').pop().toLowerCase();
     //alert(`this is the ${item}`)
     let url = `http://127.0.0.1:5000/files/${item}`
     //check for file type by extension
