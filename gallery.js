@@ -1,8 +1,8 @@
 let files = document.getElementById('files');
 let videos = document.getElementById('videos');
 let images = document.getElementById('images');
-let imageview_box = document.getElementById('imagebox');
-let videoview_box = document.getElementById('videobox');
+let imageview_box = document.getElementById('imageview_box');
+let videoview_box = document.getElementById('videoview_box');
 
 files.addEventListener('click', () => setCurrent(files));
 videos.addEventListener('click', () => setCurrent(videos));
