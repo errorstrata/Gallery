@@ -22,19 +22,20 @@ function loadImages() {
  .then(data => {
   let images = data.files;
   images.forEach(item => {
+    //get the extension
+    let ext = item.split('.').pop().tolowerCase();
     //alert(`this is the ${item}`)
-    let image = `http://127.0.0.1:5000/files/${item}`
-    let fileType = image.type;
-    alert(`this is the ${fileType}`)
-    if (fileType.startsWith('image/')) {
+    let url = `http://127.0.0.1:5000/files/${item}`
+    //check for file type by extension
+    if (['png','jpg','jpeg','gif','webp'].includes(ext)) {
       const img = document.createElement('img');
-      img.src = image;
+      img.src = url;
       img.classList.add('photo')
       imageview_box.appendChild(img)
     }
-    else if(fileType.startsWith('video/')) {
+    else if(['mp4','mov','avi','mkv'].includes(ext) {
       const video = document.createElement('video');
-      video.src = image;
+      video.src = url;
       video.classList.add('photo')
       videoview_box.appendChild(video)
     }
