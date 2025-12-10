@@ -37,4 +37,4 @@ function loadImages() {
  })
 }
 
-loadImages()
+window.onload(loadImages())
