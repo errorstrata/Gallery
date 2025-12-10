@@ -17,11 +17,11 @@ function setCurrent(activeBtn) {
 }
 
 function loadImages() {
- fetch('http://127.0.0.1:5000/files')
- .then(res => res.json())
- .then(data => {
-  let images = data.files;
-  images.forEach(item => {
+  fetch('http://127.0.0.1:5000/files')
+  .then(res => res.json())
+  .then(data => {
+   let images = data.files;
+   images.forEach(item => {
     //get the extension
     let ext = item.split('.').pop().toLowerCase();
     //alert(`this is the ${item}`)
@@ -33,7 +33,7 @@ function loadImages() {
       img.classList.add('photo')
       imageview_box.appendChild(img)
     }
-    else if(['mp4','mov','avi','mkv'].includes(ext)) {
+    else if (['mp4','mov','avi','mkv'].includes(ext)) {
       const video = document.createElement('video');
       video.src = url;
       video.classList.add('photo')
