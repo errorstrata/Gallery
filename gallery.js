@@ -26,13 +26,13 @@ function loadImages() {
     if (fileType.startsWith('image/')) {
       const img = document.createElement('img');
       img.src = `http://127.0.0.1:5000/files/${image}`;
-      img.classList.add('image')
+      img.classList.add('photo')
       imageview_box.appendChild(img)
     }
     else if(fileType.startsWith('video/')) {
       const video = document.createElement('video');
       video.src = `http://127.0.0.1:5000/files/${image}`;
-      video.classList.add('video')
+      video.classList.add('photo')
       videoview_box.appendChild(video)
     }
   })
