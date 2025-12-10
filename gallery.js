@@ -22,7 +22,7 @@ function loadImages() {
  .then(data => {
   let images = data.files;
   images.forEach(item => {
-    alert("this is the item")
+    alert(`this is the ${item}`)
     let image = `http://127.0.0.1:5000/files/${item}`
     let fileType = image.type;
     if (fileType.startsWith('image/')) {
