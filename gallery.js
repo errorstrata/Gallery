@@ -33,7 +33,7 @@ function loadImages() {
       img.classList.add('photo')
       imageview_box.appendChild(img)
     }
-    else if(['mp4','mov','avi','mkv'].includes(ext) {
+    else if(['mp4','mov','avi','mkv'].includes(ext)) {
       const video = document.createElement('video');
       video.src = url;
       video.classList.add('photo')
