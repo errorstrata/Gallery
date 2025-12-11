@@ -58,3 +58,6 @@
  background-color: #FF7A00;
  color: #fff;
 }
+.notSelected{
+ display:none;
+}
