@@ -14,7 +14,7 @@ function setCurrent(activeBtn) {
   
   // Add current class to the clicked button
   activeBtn.classList.add('current');
-  selectiveDisplay(activeBtn)
+  selectiveDisplay(activeBtn.id)
 }
 
 function selectiveDisplay(displaying) {
@@ -45,13 +45,14 @@ function loadImages() {
     else if (['mp4','mov','avi','mkv'].includes(ext)) {
       const video = document.createElement('video');
       video.src = url;
+      video.controls = true
       video.classList.add('photo')
       videoview_box.appendChild(video)
     }
   })
  })
  .catch(err => {
-   alert("error: ", data.message)
+   alert("error: ", err.message)
  });
 }
 
