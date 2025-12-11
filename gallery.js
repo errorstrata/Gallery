@@ -14,7 +14,7 @@ function setCurrent(activeBtn) {
   
   // Add current class to the clicked button
   activeBtn.classList.add('current');
-  selectiveDisplay(current)
+  selectiveDisplay(activeBtn)
 }
 
 function selectiveDisplay(displaying) {
