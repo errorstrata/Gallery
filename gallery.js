@@ -14,6 +14,15 @@ function setCurrent(activeBtn) {
   
   // Add current class to the clicked button
   activeBtn.classList.add('current');
+  selectiveDisplay(current)
+}
+
+function selectiveDisplay(displaying) {
+  imageview_box.classList.add("notSelected")
+  videoview_box.classList.add("notSelected")
+
+  if (displaying === "images") imageview_box.classList.remove("notSelected")
+  if (displaying === "videos") videoview_box.classList.remove("notSelected")  
 }
 
 function loadImages() {
