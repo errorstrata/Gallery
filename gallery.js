@@ -49,6 +49,13 @@ function loadImages() {
       video.classList.add('photo')
       videoview_box.appendChild(video)
     }
+    else if (['pdf'].includes(ext)) {
+      const link = document.createElement('a')
+      link.href = url;
+      link.textContent = `📄 ${item}`;
+      link.download = item;
+      imageview_box.appendChild(link);
+    }
   })
  })
  .catch(err => {
