@@ -18,6 +18,13 @@ function go() {
   previewbox.innerHTML = '';
   previewbox.appendChild(img);
  }
+ else if (filetype.startsWith('video/')) {
+  const video = document.createElement('video');
+  video.src = fileURL;
+  video.style.width = "200px"
+  previewbox.innerHTML = '';
+  previewbox.appendChild(video);
+ }
 }
 
 //const finalsend = document.getElementById('sendBtn');
