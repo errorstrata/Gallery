@@ -1,16 +1,18 @@
 let files = document.getElementById('files');
 let videos = document.getElementById('videos');
 let images = document.getElementById('images');
+let documents = document.getElementById('documents')
 let imageview_box = document.getElementById('imageview_box');
 let videoview_box = document.getElementById('videoview_box');
 
 files.addEventListener('click', () => setCurrent(files));
 videos.addEventListener('click', () => setCurrent(videos));
 images.addEventListener('click', () => setCurrent(images));
+documents.addEventListener('click', () => setCurrent(documents));
 
 function setCurrent(activeBtn) {
   // Remove current class from all buttons
-  [files, videos, images].forEach(btn => btn.classList.remove('current'));
+  [files, videos, images, documents].forEach(btn => btn.classList.remove('current'));
   
   // Add current class to the clicked button
   activeBtn.classList.add('current');
@@ -31,8 +33,8 @@ function loadImages() {
   .then(data => {
    let images = data.files;
    images.forEach(item => {
-    //get the extension
-    let ext = item.split('.').pop().toLowerCase();
+    //get the extension.toLowerCase();
+    let ext = item.split('.').pop().toLowerCase()
     //alert(`this is the ${item}`)
     let url = `http://127.0.0.1:5000/files/${item}`
     //check for file type by extension
@@ -54,6 +56,7 @@ function loadImages() {
       link.href = url;
       link.textContent = `📄 ${item}`;
       link.download = item;
+      link.classList.add('photo')
       imageview_box.appendChild(link);
     }
   })
