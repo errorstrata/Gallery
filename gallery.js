@@ -2,8 +2,7 @@ let files = document.getElementById('files');
 let videos = document.getElementById('videos');
 let images = document.getElementById('images');
 let documents = document.getElementById('documents')
-let imageview_box = document.getElementById('imageview_box');
-let videoview_box = document.getElementById('videoview_box');
+let view_box = document.getElementById('view_box');
 
 files.addEventListener('click', () => setCurrent(files));
 videos.addEventListener('click', () => setCurrent(videos));
@@ -22,9 +21,11 @@ function setCurrent(activeBtn) {
 function selectiveDisplay(displaying) {
   imageview_box.classList.add("notSelected")
   videoview_box.classList.add("notSelected")
+  documents.classList.add("notSelected")
 
-  if (displaying === "images") imageview_box.classList.remove("notSelected")
-  if (displaying === "videos") videoview_box.classList.remove("notSelected")  
+  if (displaying === "files") view_box.classList.remove("notSelected")
+  if (displaying === "images") view_box.classList.remove("notSelected")
+  if (displaying === "videos") view_box.classList.remove("notSelected")  
 }
 
 function loadImages() {

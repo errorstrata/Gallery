@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent
 
 # Upload folder (inside project)
 UPLOAD_FOLDER = BASE_DIR / "static" / "images"
-UPLOAD_FOLDER.mkdir(parents=True, exist_ok=True)
+#UPLOAD_FOLDER.mkdir(parents=True, exist_ok=True)
 
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
